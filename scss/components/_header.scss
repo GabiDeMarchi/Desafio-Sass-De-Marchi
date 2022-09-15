@@ -1,0 +1,24 @@
+.header {
+	background-color: #494b52;
+  }
+
+  
+  .header__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  .header__content-img {
+	width: 70px;
+  }
+  
+  .header__content-navbar {
+	display: flex;
+  }
+  
+  .header__content-navbar a {
+	margin: 0 15px;
+	color: #e2e8f0;
+	font-weight: bold;
+  }

@@ -1,0 +1,122 @@
+.gridcontainer {
+	display: grid;
+	height: 100vh;
+	width: 100vw;
+	margin: 0 auto;
+	grid-template-areas: 
+	"header header header"	
+	"titulo titulo titulo"
+	"contenido contenido img"
+	"footer footer footer";
+	grid-template-columns: repeat(3, auto);
+	grid-template-rows: 50px 100px 100% 50px;
+	height: 100vh;
+}
+.gridheader {
+	grid-area: header;
+	background-color: #494b52;
+
+	&__content{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&-img{
+			width: 70px;
+		}
+
+		&-navbar{
+			display: flex;
+
+			a{
+				margin: 0 15px;
+				color: #e2e8f0;
+				font-weight: bold;
+			}
+		}
+	}
+  }
+
+.gridmainsection {
+	border: #494b52;
+	grid-area:contenido;
+	width:auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly ;
+	height: auto;
+	align-items: center;
+	flex-wrap: nowrap;
+	align-content: flex-start;
+	padding: 40px;
+	align-items: flex-start;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 50%);
+    margin-top: 50px;
+	}
+
+.gridmaintitle {
+	text-align: center;
+	font-size: 40px;
+	grid-area: titulo;
+}
+.gridmainimg{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	img {
+		padding: 40px;
+		width: 400px;
+		border-radius: 20px;
+		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 50%)
+	}
+}
+
+.gridfooter {
+	grid-area: footer;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+
+	&__img{
+		img{
+			width: 40px;
+		}
+	}
+
+	&__content{
+		p{
+			text-align: center;
+			width: 3px;
+			color: #494b52;
+		}
+	}
+}
+
+@media (max-width:815px){
+    .gridcontainer{
+        display: grid;
+        height: 100vh;
+        max-width: 1200px;
+        margin: 0 auto;
+        grid-template-areas: 
+        "header"	
+        "titulo"
+        "contenido"
+        "img"
+        "footer";
+        grid-template-columns: (1, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        row-gap: 30px;
+    }
+    .gridmainsection{
+        text-align: center;
+    }
+    .gridmainimg{
+        align-items: center;
+        grid-area:img;
+    }
+}
