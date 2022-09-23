@@ -5,7 +5,9 @@
   }
   body{
 	height: 100%;
+  background-image: linear-gradient(to left, rgb(252, 217, 143),white 20% 80%,rgb(243, 169, 8));
   }
+
   a {
 	text-decoration: none;
   }
@@ -17,3 +19,16 @@
   ul {
 	list-style-type: none;
   }
+
+  .container {
+    text-align: center;
+    font-size: 40px;
+    color: $secondary
+  }
+
+  @mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+  }
+
+  

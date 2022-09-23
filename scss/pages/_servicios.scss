@@ -1,7 +1,8 @@
 .gridcontainer {
+	@include sizes(100vw, 100vh);
 	display: grid;
-	height: 100vh;
-	width: 100vw;
+	// height: 100vh;
+	// width: 100vw;
 	margin: 0 auto;
 	grid-template-areas: 
 	"header header header"	
@@ -38,13 +39,14 @@
   }
 
 .gridmainsection {
+	@include sizes(auto, auto);
 	border: #494b52;
 	grid-area:contenido;
-	width:auto;
+	// width:auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly ;
-	height: auto;
+	// height: auto;
 	align-items: center;
 	flex-wrap: nowrap;
 	align-content: flex-start;
@@ -53,11 +55,11 @@
     border-radius: 20px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 50%);
     margin-top: 50px;
+	background-color: white
 	}
 
 .gridmaintitle {
-	text-align: center;
-	font-size: 40px;
+	@extend .container;
 	grid-area: titulo;
 }
 .gridmainimg{
@@ -69,7 +71,8 @@
 		padding: 40px;
 		width: 400px;
 		border-radius: 20px;
-		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 50%)
+		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 50%);
+		background-color: white;
 	}
 }
 

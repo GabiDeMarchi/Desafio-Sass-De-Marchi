@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gabidemarchi.github.io/Desafio-Sass-De-Marchi/sitemap.xml
